@@ -1,0 +1,51 @@
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --success-color: #28a745;
+  --info-color: #17a2b8;
+  --warning-color: #ffc107;
+  --danger-color: #dc3545;
+  --light-color: #f8f9fa;
+  --dark-color: #343a40;
+  font-size: 16px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  background-color: blue;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+}
+.menu-div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.green-button {
+  background-color: green;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.green-btn-link {
+  display: inline-block;
+  width: 15rem;
+  height: 2rem;
+  line-height: 2rem;
+  margin-top: 2rem;
+  background-color: rgb(135, 247, 135);
+  text-align: center;
+  vertical-align:middle;
+  text-decoration: none;
+  border-radius: 3px;
+}
+
+.footer-area {
+  position: fixed;
+  bottom: 1rem;
+}
