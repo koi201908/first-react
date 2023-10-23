@@ -1,0 +1,253 @@
+响应式样式指的是一种能够自动适应不同屏幕尺寸的网页设计风格。在日语中，响应式样式被称为「レスポンシブデザイン」。在移动设备应用开发中，需要注意以下几点：
+
+避免使用绝对定位
+避免使用大量的图片
+避免使用过多的动画效果
+优化CSS代码，减少文件大小
+
+rem是CSS中的一种长度单位，它是相对于根元素的字体大小而言的。因此，如果根元素的字体大小为16像素，则1rem等于16像素。使用rem作为单位可以使网页在不同的屏幕尺寸下自适应，这是响应式设计的重要组成部分。123
+https://qiita.com/butchi_y/items/453654828d9d6c9f94b0
+
+CSS中的根元素是指:root选择器匹配到的元素，也就是文档树中最顶层结构的元素。在HTML中，根元素是指html元素。您可以使用:root选择器来定义根元素的样式，例如：
+
+:root {
+  font-size: 16px;
+  color: #333;
+}
+
+HTT端末にWEBアプリケーションのCSSを設定する際には、以下の点に注意する必要があります：
+
+HTT端末の画面サイズに合わせて、レスポンシブデザインを採用することが望ましいです。vfを使用すると、画面サイズに応じて自動的にレイアウトが調整されるため、ユーザーが快適に使用できます。
+HTT端末の画面サイズが小さいため、フォントサイズや行間などのテキストスタイルを適切に設定することが重要です。また、テキストの色や背景色も、読みやすさを考慮して選択する必要があります。
+HTT端末は、PCと比較して処理能力が低いため、CSSファイルのサイズを小さくすることが望ましいです。CSSファイルを圧縮したり、不要なスタイルを削除したりすることで、ページの読み込み速度を向上させることができます。
+HTT端末は、PCと比較して画面が小さいため、余白やパディングなどのスペースを適切に設定することが重要です。余白やパディングが不十分だと、テキストやボタンなどのコンテンツが密集して表示されてしまい、見づらくなってしまいます。
+以上の点に留意しながらCSSを設定することで、HTT端末で快適に使用できるWEBアプリケーションを作成することができます。希望する情報が提供できていることを願っています。
+
+
+相对于视口的单位有vw, vh, vmin, vmax。其中，vw表示视口宽度的百分比，vh表示视口高度的百分比，vmin表示视口宽度和高度中较小值的百分比，vmax表示视口宽度和高度中较大值的百分比。这些单位可以用于创建响应式设计，以便在不同大小的设备上正确显示内容。
+
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --success-color: #28a745;
+  --info-color: #17a2b8;
+  --warning-color: #ffc107;
+  --danger-color: #dc3545;
+  --light-color: #f8f9fa;
+  --dark-color: #343a40;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+a {
+  color: var(--primary-color);
+}
+
+.btn {
+  display: inline-block;
+  padding: .5rem .75rem;
+  font-size: .875rem;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  background-color: var(--primary-color);
+  border-radius: .25rem;
+}
+
+このCSSサンプルでは、:rootを使用して、プライマリーカラー、セカンダリーカラー、成功カラーなどの変数を定義しています。これにより、変数を使用してCSSを管理することができます。また、このサンプルでは、body要素、見出し要素、段落要素などのスタイルが定義されています。希望する情報が提供できていることを願っています。
+
+
+/* ボタン */
+.button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  background-color: #007bff;
+  border-radius: 0.25rem;
+}
+
+/* テキスト */
+.text {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: #333;
+}
+
+/* リスト */
+.list {
+  margin-left: 0;
+  padding-left: 1rem;
+}
+
+.list-item {
+  display: list-item;
+}
+
+/* 見出し */
+.heading {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* ボックスデザイン */
+.box {
+  padding: 1rem;
+  border-radius: 0.25rem;
+  box-shadow: rgba(0,0,0,0.2) 0px 2px 4px -1px, rgba(0,0,0,0.14) 0px 4px 5px 0px, rgba(0,0,0,0.12) 0px 1px 10px 0px;
+}
+
+/* リボン */
+.ribbon {
+    position:relative;
+    display:inline-block;
+    padding:.5em .75em .5em .75em;
+    margin-right:.5em;
+    background-color:#f00;color:#fff;font-size:.9em;font-weight:bold;text-transform:uppercase;border-radius:.25em
+}
+.ribbon:before,.ribbon:after{
+    content:"";
+    position:absolute
+}
+.ribbon:before{
+    left:-.5em;top:100%;border:.5em solid transparent;border-top-color:#f00
+}
+.ribbon:after{
+    right:-.5em;top:100%;border:.5em solid transparent;border-top-color:#f00
+}
+
+/* 引用ボックス */
+.quote {
+    position:relative;padding:.75em;margin:.75em;background-color:#f9f9f9;border-left:.25em solid #ccc
+}
+.quote:before{
+    content:"";
+    position:absolute;left:-.25em;top:-.25em;bottom:-.25em;width:.25em;background-color:#ccc
+}
+
+/* 吹き出し */
+.balloon {
+    position:relative;padding:.75em;margin:.75em;background-color:#f9f9f9;border-radius:.25em
+}
+.balloon:before{
+    content:"";
+    position:absolute;left:-.5em;top:.75em;border:.5em solid transparent;border-right-color:#f9f9f9
+}
+.balloon:after{
+    content:"";
+    position:absolute;left:-.6em;top:.75em;border:.6em solid transparent;border-right-color:#ccc
+}
+
+
+
+方案一：TailwindCSS和ElementUI
+方案二：TailwindCSS和daisyui
+哪种方案更适合于HTT设备Web应用呢？写法上来说哪种方案更精简呢？哪种方案的打包后的size更小呢？
+在HTT设备Web应用中，使用TailwindCSS和daisyui的方案可能更加适合。这是因为daisyui是一个基于Tailwind CSS的组件库，它提供了许多常用的UI组件，可以帮助您更快地构建网站。此外，daisyui使用语义化的类名，这使得HTML代码更加简洁易读。相比之下，ElementUI提供了更多的组件和功能，但是它的体积也更大。因此，如果您需要使用ElementUI提供的特定组件或功能，则可以选择使用TailwindCSS和ElementUI的方案。总体而言，使用TailwindCSS和daisyui的方案可能会更加精简，并且打包后的size也可能会更小。
+使用原生CSS可以使您的代码更加精简，因为您不需要引入任何外部库或框架。这意味着您可以更好地控制您的代码，并且可以避免引入不必要的代码。然而，使用原生CSS也可能会导致一些问题，例如样式冲突、浏览器兼容性问题等。如果您需要使用复杂的UI组件或功能，则可能需要使用组件库来帮助您更快地构建网站。总体而言，使用原生CSS可以使您的代码更加精简，但是在某些情况下，使用组件库可能会更加方便。
+
+
+下記のHTT端末（width 600 height 800）に使うreactアプリソースを提供指定いただきたいです。
+
+・create-react-appを利用して雛形を作成
+・レスポンシブCSSを使うのが必要
+・フロント側のアプリ基盤としての雛形を作りたいので、ルーターテーブルを独立のファイルに定義してほしい（react router6を使う）
+・下記の画面を作成
+
+1)画面１：メニュー画面
+・青背景、グリーンボタン
+・上から下まで、縦式レイアウトで下記のボタンがあります
+　検品:押下したら下記の画面２に遷移します
+　検品２:押下したら「検品２」alertポップアップ出てよい。
+　実績:押下したら「実績」alertポップアップ出てよい。
+
+　戻る：押下したら「戻る」alertポップアップ出てよい。
+
+2)画面２：検品画面
+ラベル：番号入力
+インプットボックス
+戻るボタン：クリックしたら前画面に戻る
+開始ボタン：押下したら「開始」alertポップアップ出てよい。
+
+
+
+
+html{
+/* 100/750*100 */
+	font-size:13.333333vw;
+}
+	
+@media(min-width:750px) {
+	html{
+		font-size:100px;
+	}
+}
+
+body{
+	font-size:12px;
+}
+段CSS代码的作用是使HTML文档的根元素（html）的字体大小随着屏幕宽度的变化而变化。在屏幕宽度小于750像素时，根元素的字体大小将根据屏幕宽度进行缩放。具体来说，根元素的字体大小将设置为屏幕宽度的13.333333％。例如，如果屏幕宽度为600像素，则根元素的字体大小将设置为80像素（100/750*600=80）。当屏幕宽度大于或等于750像素时，根元素的字体大小将设置为100像素。此外，body元素的字体大小设置为12像素。希望这些信息能对您有所帮助。
+
+
+button {
+  font-size: 2em;
+  padding: 1em 2em;
+}
+
+@media (max-width: 768px) {
+  button {
+    font-size: 1.5em;
+    padding: 0.5em 1em;
+  }
+}
+
+@media (max-width: 480px) {
+  button {
+    font-size: 1em;
+    padding: 0.25em 0.5em;
+  }
+}
+在上面的代码中，我们使用了font-size和padding属性来定义按钮的样式。我们还使用了媒体查询来根据窗口大小调整按钮的大小和字体大小。
+
+在上面的代码中，我们使用了3个媒体查询。第一个媒体查询适用于大屏幕设备，第二个媒体查询适用于中等屏幕设备，第三个媒体查询适用于小屏幕设备。每个媒体查询都会根据窗口大小调整按钮的大小和字体大小。
+相对于视口的单位有vw, vh, vmin, vmax。其中，vw表示视口宽度的百分比，vh表示视口高度的百分比，vmin表示视口宽度和高度中较小值的百分比，vmax表示视口宽度和高度中较大值的百分比。这些单位可以用于创建响应式设计，以便在不同大小的设备上正确显示内容。
